@@ -118,8 +118,8 @@ class Tree {
 	public int size() {
 		return 1+size(root);
 	}
-	private static int size(TreeNode n) {// this function computes the size, which is equivalent to the number of leaves/root ort elements in the trees using a recursively defined function.
-		// STUDENT FILL IN CODE HERE
+	private static int size(TreeNode n) {// this function computes the size, which is equivalent to the number of leaves/root or elements in the trees using a recursively defined function.
+		
 		if (n.left == null && n.right == null) {
 			return 0;
 		}else if (n.left == null&& n.right !=null) {
@@ -136,7 +136,7 @@ class Tree {
 		return 1+depth(root);
 	}
 	private static int depth(TreeNode n) {// this function computes the depth if the tree using a recursively defined fucntion.
-		// STUDENT FILL IN CODE HERE
+	
 		if (n.left == null && n.right == null) {
 			return 0;
 		}else if (n.left == null&& n.right !=null) {
@@ -184,7 +184,7 @@ public class TestTree {
 			myTree.add(scan.nextInt());
 		}
 		scan.close();
-		// STUDENTS FILL IN CODE TO READ INTS FROM A FILE WHOSE
+		
 		// FILENAME IS IN args[0] AND ADD THEM TO THE TREE.
 
 		System.out.println("Sum is " + myTree.sum());

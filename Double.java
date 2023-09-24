@@ -7,14 +7,12 @@
 
 
 /** class DoubleRing
- *
  * class DoubleRing implements an actual doubly linked ring.
  * The ring has the concept of a "current" element.
  * When the user adds to or removes ring elements,
  * the operations are done at the "current" position.
- *
- * There are several methods below that must be implemented by the student.
  */
+ 
 class DoubleRing {
 	/** class Node - a member class of DoubleRing
 	 * class Node represents one element in a doubly linked ring.
@@ -89,7 +87,7 @@ class DoubleRing {
 			m_current.next=n;
 		}
 		
-		// STUDENTS COMPLETE THIS METHOD.
+		
 	}
 
 	// Helper function so we can add chars rather than Nodes to this ring.
@@ -106,7 +104,7 @@ class DoubleRing {
 	//	only 1 element left in the ring - make the ring empty
 	//	ring is entirely empty - throw an IndexOutOfBoundsException
 	void remove()throws IndexOutOfBoundsException {
-		// STUDENTS COMPLETE THIS METHOD.
+		
 		if (m_current==null && m_current.next==null && m_current.prev==null) {// if the ring is empty it throws the IndexOutOfBoundsException
 			throw new IndexOutOfBoundsException();
 		}
@@ -132,7 +130,7 @@ class DoubleRing {
 	// Do not keep on printing forever!
 	
 	void PrintRing() {// prints the ring from the current element to the element before it
-		// STUDENTS COMPLETE THIS METHOD.
+		
 		//m_current=m_current.next;
 		for (int i = 0;i<counter;i++) {
 			
