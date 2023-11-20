@@ -16,8 +16,8 @@ import java.io.*;
 class Simulation{ 
 	int longestTime = 0, averageTime = 0, shortestTime = 0;
 	static String structures = "linked"; //linked
-	static int floors = 32;///// back to 32// UP TICK UP
-	static double passengers = 0.03;// 0.03// DOWN TICK GO DOWN
+	static int floors = 3;///// back to 32// UP TICK UP
+	static double passengers = 1;// 0.03// DOWN TICK GO DOWN
 	static int elevators = 1;// UP TICKS DOWN
 	static int elevatorCapacity = 10;// 10//UP TICK DOWN
 	static int duration = 500;// MAke it long
@@ -43,14 +43,15 @@ class Simulation{
 		passengers =  Double.parseDouble(p.getProperty("passengers"));
 		elevatorCapacity = Integer.parseInt(p.getProperty("elevatorCapacity"));
 		duration = Integer.parseInt(p.getProperty("duration"));
+		elevators=Integer.parseInt(p.getProperty("elevators"));
 		  
 		//testing for property files
-//		System.out.println("Floor: " +floors);
-//		System.out.println("passengers : " +passengers);
-//		System.out.println("elevators : " +elevators );
-//		System.out.println("elevator capacity : " +floors);
-//		System.out.println("duration : " +floors);
-//		System.out.println("structures: " +structures);
+		// System.out.println("Floor: " +floors);
+		// System.out.println("passengers : " +passengers);
+		// System.out.println("elevators : " +elevators );
+		// System.out.println("elevator capacity : " +floors);
+		// System.out.println("duration : " +floors);
+		// System.out.println("structures: " +structures);
 		
 		createFloors();// creates the floors with values from the properties file. 
 	}
@@ -268,7 +269,7 @@ public class Elevator{
 	 * this method dereferences passengers that reach their destination floors
 	 */
 	private void unLoadPassengers() { 
-
+		
 		if (goingUp) {
 			while(!(upHeap.isEmpty())&&upHeap.peek().destinationFLoor==currentFloor) {// remove all the passengers that are getting down at the current floor
 				long timeToDestination = tick- upHeap.peek().startTime;
