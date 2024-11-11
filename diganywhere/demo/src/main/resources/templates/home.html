@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+    .header {
+        padding: 60px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+    }
+</style>
+<head>
+    <div class="header">
+        <title>Home</title>
+        <p>I am your construction assistant tell me what you want to build and I will give you a list of machines that Caterpillar offers for you!</p>
+    </div>
+
+</head>
+<body>
+<h1>Welcome</h1>
+
+<h2>Chat with Assistant:</h2>
+
+<form th:action="@{/search}" method="post">
+    <div>
+        <label>Enter your question:</label>
+        <input type="text" name="question" required/>
+    </div>
+
+    <div>
+        <button type="submit">Ask</button>
+    </div>
+</form>
+
+
+
+</body>
+</html>

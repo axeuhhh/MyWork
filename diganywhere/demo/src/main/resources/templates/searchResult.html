@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+    .header {
+        padding: 60px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+    }
+</style>
+<head>
+    <div class="header">
+        <title> Result </title>
+        <p>Response from your question</p>
+    </div>
+
+</head>
+<body>
+<h1>Search Result:</h1>
+<p th:text="${result}"></p>
+<a style="display: flex; justify-content: space-between">If you have another project in mind click the button below!</a>
+<div>
+    <a th:href="@{/home}" style="display: flex">If you have another project in mind click the button below!</a>
+</div>
+
+
+</body>
+</html>
